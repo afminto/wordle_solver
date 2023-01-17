@@ -106,44 +106,9 @@ for word in ans_arr:
     total_guesses += guesses
     print(float(total_guesses) / float(total_tested))
 
+
+
+average_guesses = total_guesses / len(ans_arr)
+print(f'Average number of guesses necessary: {average_guesses}')
+
 exit(0)
-
-#average_guesses = total_guesses / len(ans_arr)
-#print(f'Average number of guesses necessary: {average_guesses}')
-
-#remaining = guess('groan', guess_arr, 'hoard')
-
-scoredle = '''tarot   baron   carol   savor   manor   arrow
-razor   maror   mayor   taros   major   labor
-vapor   favor   caron   valor   rayon   maron
-apron   karoo   karos   saros   cargo   arbor
-armor   faros   taroc   tarok   parol   arson
-carom   carob   actor   gator   tabor   ratoo
-nagor   ratos   sapor   payor   taxor   arroz
-acros   racon   acron   razoo   agros   oarer
-ramon   aeros   ratio   afros   pargo   sargo
-pareo   margo   parmo   argon   carbo   parvo
-arcos   garbo   sarvo   arvos   largo   narco
-argot   yarto   yarco   argol   organ   groan
-ariot   aroma   algor   arose   oater   croak
-oaker   rapso   okras   raupo   purao   oiran
-proas   orcas   groat   aroba   troat   ocrea
-troak   proal   orbat   trona   orval   oscar
-amour   ottar   groma   orgia   krona   orixa
-rioja'''
-
-scoredle = scoredle.replace('\n', '')
-scoredle = scoredle.replace(' ', '')
-print(scoredle)
-
-scoredle_lst = []
-print(type(len(scoredle)))
-for i in range(int(len(scoredle) / 5)):
-    scoredle_lst.append(scoredle[5*i:5*i+5])
-
-print(scoredle_lst)
-print(len(scoredle_lst))
-
-for sc in scoredle_lst:
-    if sc not in remaining:
-        print(sc)
